@@ -1,0 +1,7 @@
+3|***|2020-06-17 19:14:35.5085|***|6188|***|1|***|WARN|***|Delta.PLC.Network.Structure.StationBase.SetModuleDdfVersionWarningText|***|AS332T-A: Firmware version is 01.04.00, some features are not available 
+70|***|2020-06-17 19:14:56.5938|***|6188|***|1|***|WARN|***|HWCONFIG.Form_Main.Form_Main_FormClosing|***|Please stop Online Mode before closing. 
+71|***|2020-06-17 19:14:58.5329|***|6188|***|1|***|WARN|***|HWCONFIG.Form_Main.Form_Main_FormClosing|***|Please stop Online Mode before closing. 
+72|***|2020-06-17 19:15:06.1543|***|6188|***|1|***|WARN|***|HWCONFIG.Form_Main.Form_Main_FormClosing|***|Please stop Online Mode before closing. 
+73|***|2020-06-17 19:15:13.9547|***|6188|***|1|***|WARN|***|HWCONFIG.Form_Main.Form_Main_FormClosing|***|Please stop Online Mode before closing. 
+74|***|2020-06-17 19:16:03.0196|***|6188|***|6|***|ERROR|***|HWCONFIG.View.MainUI.DeviceView.AS.AsDrawStrategy+<>c__DisplayClass105_0.<OnlineModule>b__1|***|COMMGR encountered an error while processing the request: failed to open COM port 
+75|***|2020-06-17 19:29:41.2854|***|6188|***|1|***|INFO|***|HWCONFIG.Form_Main.SaveUserProject|***|Project saved successfully.\r\nProject directory: C:\Users\Dimonchik\Desktop\Программы плк\DR(4)\DR 

@@ -1,0 +1,90 @@
+Class,Identifiers,Address,Type,Initial Value,Comment
+VAR,OFF_SET_MIN_PORSH1,D20010,INT,640,Смещение первого поршня
+VAR,OFF_SET_MIN_PORSH2,D20012,INT,680,Смещение второо поршня
+VAR,OFF_SET_MAX_PORSH1,D20014,INT,1100,
+VAR,OFF_SET_MAX_PORSH2,D20016,INT,1100,
+VAR,SPEED_INIT,W5000,DINT,,
+VAR,RUN_PID_1,W5002.0,BOOL,,Запуск ПИД регулятора
+VAR_RETAIN,SET_SV_1,W0,REAL,,Заданное значение
+VAR_RETAIN,SET_PV_1,W2,REAL,,Текущее значение
+VAR_RETAIN,SET_PID_MODE_1,W4,DINT,0,Режиме работы ПИД регулятора
+VAR,SET_PID_MAN_1,W5003.0,BOOL,,Переключатель автоматический/ручной режим (ON - Manual)
+VAR,SET_MOUT_AUTO_1,W5004.0,BOOL,TRUE,Режим работы MOUT (ON - MOUT будет следовать за MV)
+VAR,SET_CYCLE_1,W5005,DINT,,Время опроса (цикл) шаг 1 мс 1-40000 ед (чем меньше значение тем больше цикл)
+VAR_RETAIN,SET_Kp_1,W6,REAL,30,000,Пропорциональный коэф
+VAR_RETAIN,SET_Ki_1,W8,REAL,2,500,Интегральный коэф
+VAR_RETAIN,SET_Kd_1,W10,REAL,10,000,Дифференциальный коэф
+VAR_RETAIN,SET_PID_DIR_1,W12.0,BOOL,TRUE,Переключатель отрицательная/ положительная ОС (ON - ООС)
+VAR,SET_ERR_DBW_1,W5007,REAL,,Мёртвая зона ошибки (разница между SV и PV при которой ошибка считается нулевой)
+VAR_RETAIN,SET_MV_MAX_1,W13,REAL,24000,000,Верхний предел выхода MV
+VAR_RETAIN,SET_MV_MIN_1,W15,REAL,8000,000,Нижний предел выхода MV
+VAR,SET_MOUT_1,W5009,REAL,0,000,Ручное задание значения на выходе MV
+VAR,SET_I_MV_1,W5011,ARRAY [10] OF DWORD,,Служебные регистры
+VAR,SET_MV_1,W5031,REAL,,Выход ПИД регулятора
+VAR,SET_Tf_1,W5033,REAL,1,000,Постоянная времи дифференцирования (сек)
+VAR,SET_PID_EQ_1,W5035.0,BOOL,TRUE,Выбор расчётной формулы регулятора
+VAR,SET_PID_DE_1,W5036.0,BOOL,TRUE,Выбор варианта расчёта дифференциальной составляющей
+VAR_RETAIN,SET_BIAS_1,W17,REAL,0,000,Форсирующее звено (feedforward)
+VAR_RETAIN,SET_MV_MOUT_1,W19,REAL,0,000,Выход MV при авто - ON
+VAR_RETAIN,SET_TIME_CONSTANT_1,W21,REAL,5,000,Постоянная времени
+VAR,RUN_PID_2,W5037.0,BOOL,,Запуск ПИД регулятора
+VAR_RETAIN,SET_SV_2,W23,REAL,,Заданное значение
+VAR_RETAIN,SET_PV_2,W25,REAL,,Текущее значение
+VAR_RETAIN,SET_PID_MODE_2,W27,DINT,0,Режиме работы ПИД регулятора
+VAR,SET_PID_MAN_2,W5038.0,BOOL,,Переключатель автоматический/ручной режим (ON - Manual)
+VAR,SET_MOUT_AUTO_2,W5039.0,BOOL,TRUE,Режим работы MOUT (ON - MOUT будет следовать за MV)
+VAR,SET_CYCLE_2,W5040,DINT,,Время опроса (цикл) шаг 1 мс 1-40000 ед (чем меньше значение тем больше цикл)
+VAR_RETAIN,SET_Kp_2,W29,REAL,80,000,Пропорциональный коэф
+VAR_RETAIN,SET_Ki_2,W31,REAL,5,000,Интегральный коэф
+VAR_RETAIN,SET_Kd_2,W33,REAL,20,000,Дифференциальный коэф
+VAR_RETAIN,SET_PID_DIR_2,W35.0,BOOL,TRUE,Переключатель отрицательная/ положительная ОС (ON - ООС)
+VAR,SET_ERR_DBW_2,W5042,REAL,,Мёртвая зона ошибки (разница между SV и PV при которой ошибка считается нулевой)
+VAR_RETAIN,SET_MV_MAX_2,W36,REAL,24000,000,Верхний предел выхода MV
+VAR_RETAIN,SET_MV_MIN_2,W38,REAL,8000,000,Нижний предел выхода MV
+VAR,SET_MOUT_2,W5044,REAL,0,000,Ручное задание значения на выходе MV
+VAR,SET_I_MV_2,W5046,ARRAY [10] OF DWORD,,Служебные регистры
+VAR,SET_MV_2,W5066,REAL,,Выход ПИД регулятора
+VAR,SET_Tf_2,W5068,REAL,5,000,Постоянная времи дифференцирования (сек)
+VAR,SET_PID_EQ_2,W5070.0,BOOL,TRUE,Выбор расчётной формулы регулятора
+VAR,SET_PID_DE_2,W5071.0,BOOL,TRUE,Выбор варианта расчёта дифференциальной составляющей
+VAR,SET_BIAS_2,W5072,REAL,,Форсирующее звено (feedforward)
+VAR_RETAIN,SET_MV_MOUT_2,W40,REAL,16050,000,Выход MV при авто - ON
+VAR_RETAIN,SET_TIME_CONSTANT_2,W42,REAL,5,000,Постоянная времени
+VAR,GLOBALErr,M0,BOOL,,
+VAR,RUN,M1,BOOL,,
+VAR,START_PROCESS_RUN,M2,BOOL,,
+VAR,START_PROCESS,M3,BOOL,,
+VAR,STOP_PROCESS,M4,BOOL,,
+VAR,Timer0,T0,TIMER,,
+VAR,Timer1,T1,TIMER,,
+VAR,Timer2,T2,TIMER,,
+VAR,Timer3,T3,TIMER,,
+VAR,Timer4,T4,TIMER,,
+VAR,Timer5,T5,TIMER,,
+VAR,Timer6,T6,TIMER,,
+VAR,Timer7,T7,TIMER,,
+VAR,Timer8,T8,TIMER,,
+VAR,Timer9,T9,TIMER,,
+VAR,Timer10,T10,TIMER,,
+VAR,Timer11,T11,TIMER,,
+VAR,Timer12,T12,TIMER,,
+VAR,Timer_pid1,T13,TIMER,,
+VAR,Timer_pid2,T14,TIMER,,
+VAR,STEP_PROCESS,W5074,INT,,
+VAR,RUNNING_STEP_0,W5075.0,BOOL,,
+VAR,RUNNING_STEP_1,W5076.0,BOOL,,
+VAR,RUNNING_STEP_2,W5077.0,BOOL,,
+VAR,RUNNING_STEP_3,W5078.0,BOOL,,
+VAR,RUNNING_STEP_4,W5079.0,BOOL,,
+VAR,RUNNING_STEP_5,W5080.0,BOOL,,
+VAR,RUNNING_STEP_6,W5081.0,BOOL,,
+VAR,RUNNING_STEP_7,W5082.0,BOOL,,
+VAR,RUNNING_STEP_8,W5083.0,BOOL,,
+VAR,RUNNING_STEP_9,W5084.0,BOOL,,
+VAR,RUNNING_STEP_10,W5085.0,BOOL,,
+VAR,RUNNING_STEP_11,W5086.0,BOOL,,
+VAR,RUNNING_STEP_12,W5087.0,BOOL,,
+VAR,RUNNING_STEP_13,W5088.0,BOOL,,
+VAR,RUNNING_STEP_14,W5089.0,BOOL,,
+VAR,START_PROCESS_INIT,W5090.0,BOOL,,
+VAR,RESULT_PID2,W5091,INT,,
